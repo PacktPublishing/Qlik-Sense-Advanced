@@ -1,0 +1,5 @@
+INSERT INTO automobilecustomers(ID,Gender,Ever_Married,Age,Graduated,Profession,Work_Experience,Spending_Score,Family_Size,Var_1,Segmentation)
+VALUES
+('467960','Female','No','53','Yes','Entertainment','7','Low','2','Cat_6','C'),
+('467961','Male','Yes','47','Yes','Executive','1','High','5','Cat_4','C'),
+('467968','Female','No','43','Yes','Healthcare','9','Low','3','Cat_7','A');

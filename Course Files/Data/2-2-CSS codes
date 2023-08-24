@@ -1,0 +1,15 @@
+.qv-panel-sheet{
+    background-image: linear-gradient(90deg, #987776 11.4%,  #c3bbbb 1%) !important;
+}
+
+
+.qv-listbox .serverLocked, .qv-listbox .serverSelected, .qv-listbox li.selected {
+    background-color: #9b7896;
+    color: #fff;
+    border-bottom: 1px solid ##9b7896;}
+	
+	
+	  "backgroundColor": {
+      "index": 0,
+      "color": "#987776"
+    },

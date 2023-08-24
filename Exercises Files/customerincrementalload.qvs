@@ -1,0 +1,34 @@
+LastID:
+Load Max(ID) as MaxID
+From [lib://QVDfile (desktop-csq1bde_ley)/Automobilecustomerbackup.qvd] (qvd);
+
+Let MaxID = peek('MaxID',0,LastID);
+
+Drop Table LastID;
+
+LIB CONNECT TO 'MYSQL Qlik Advance (desktop-csq1bde_ley)';
+
+CUSTOMERS:
+SQL SELECT ID,
+    Gender,
+    `Ever_Married`,
+    `Age`,
+    Graduated,
+    Profession,
+    `Work_Experience`,
+    `Spending_Score`,
+    `Family_Size`,
+    `Var_1`,
+    Segmentation
+FROM `qlik_adv`.`qlikadv_automobilecustomers` WHERE `ID` > '$(MaxID)';
+
+Concatenate
+Load * from [lib://QVDfile (desktop-csq1bde_ley)/Automobilecustomerbackup.qvd] (qvd);
+
+Store CUSTOMERS into [lib://QVDfile (desktop-csq1bde_ley)/Automobilecustomerbackup.qvd] (qvd);
+
+Drop Table CUSTOMERS;
+
+Exit Script;
+
+
